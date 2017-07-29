@@ -32,8 +32,16 @@ export class LifeTime {
     return this._yob < 1987 ? babyBoomerInfo : genXInfo;
   }
 
+  public get name(): string {
+    return this.infoAboutLife.name(this.gender)
+  }
+
   public get gamesFromYouth(): string {
     return this.infoAboutLife.gamesFromYouth
+  }
+
+  public get pronounHeShe(): string {
+    return this.gender === "Male" ? "he" : "she"
   }
 
   public get musicFromTeens(): string {
@@ -63,6 +71,7 @@ type InfoAboutLife = {
   musicFromTeens: string, // "... and listening to {{ musicFromTeens }}."
   annoyingNewsEventFromLife: string, // "They had the misfortune to be there for {{ annoyingNewsEventFromLife }}..."
   positiveNewsEventFromLife: string, // "... but they also witnessed {{ positiveNewsEventFromLife }}."
+  name: (gender:Gender) => string, // Returns a common name for this generation.
 }
 
 const babyBoomerInfo:InfoAboutLife = {
@@ -70,6 +79,7 @@ const babyBoomerInfo:InfoAboutLife = {
   musicFromTeens: "The Beatles and Elvis",
   annoyingNewsEventFromLife: "the debut of Rick Astley's \"Never Gonna Give you up\"",
   positiveNewsEventFromLife: "the collapse of the Berlin Wall",
+  name: (gender:Gender) => gender === "Male" ? "Daniel" : "Dora",
 }
 
 const genXInfo:InfoAboutLife = {
@@ -77,4 +87,5 @@ const genXInfo:InfoAboutLife = {
   musicFromTeens: "Spice Girls and Nirvana",
   annoyingNewsEventFromLife: "Meat Loaf singing in the AFL grand final",
   positiveNewsEventFromLife: "the national apology to the stolen generation",
+  name: (gender:Gender) => gender === "Female" ? "Laura" : "Pete",
 }
