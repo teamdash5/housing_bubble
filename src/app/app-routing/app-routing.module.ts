@@ -12,11 +12,6 @@ import { StoriesGuard } from '../stories/stories.guard';
 const appRoutes: Routes = [
   { path: 'stories', component: StoriesComponent, canActivate: [StoriesGuard] },
   { path: 'buildyourstories', component: StoryBuilderComponent },
-  // {
-  //   path: 'heroes',
-  //   component: HeroListComponent,
-  //   data: { title: 'Heroes List' }
-  // },
   { path: '',
     redirectTo: '/buildyourstories',
     pathMatch: 'full'
