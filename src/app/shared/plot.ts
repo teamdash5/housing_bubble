@@ -19,10 +19,10 @@ export class Plot {
     // TODO: do something smart about plotting your lifetime.
     plot._stories = [
       Story.createStory(`Born in ${lifeTime.YearOfBirth}...`),
-      Story.createStory(`... ${lifeTime.pronounHeShe} grey up playing ${lifeTime.gamesFromYouth}... `),
+      Story.createStory(`... ${lifeTime.pronounHeShe} grew up playing ${lifeTime.gamesFromYouth}... `),
       Story.createStory(`... and listening to ${lifeTime.musicFromTeens}.`),
       Story.createStory(`${lifeTime.pronounHeShe} had the misfortune to be there for ${lifeTime.annoyingNewsEventFromLife}...`),
-      Story.createStory(`... but ${lifeTime.pronounHeShe} also witnessed ${lifeTime.positiveNewsEventFromLife}.`),
+      Story.createStory(`... but ${lifeTime.pronounHeShe} also got witness ${lifeTime.positiveNewsEventFromLife}.`),
     ];
 
     plot._lifeTime = lifeTime
