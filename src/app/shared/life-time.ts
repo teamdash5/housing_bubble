@@ -1,4 +1,4 @@
-type Job = "Nurse" | "Builder" | "Teacher" | "Lawyer";
+type Job = 'Nurse' | 'Builder' | 'Teacher' | 'Lawyer';
 type Gender = 'Male' | 'Female';
 type PropertyType = 'House' | 'Unit';
 

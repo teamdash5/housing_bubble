@@ -1,7 +1,6 @@
 export class Story {
-  constructor() {}
   private _description: string;
-  
+
   public get description(): string {
     return this._description;
   }
@@ -11,4 +10,6 @@ export class Story {
     story._description = description;
     return story;
   }
+
+  constructor() {}
 }
