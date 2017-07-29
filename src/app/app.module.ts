@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { StoryBoardComponent } from './story-board/story-board.component';
 import { StoriesComponent } from './stories/stories.component';
+import { StoriesService } from './stories/stories.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { StoryBuilderComponent } from './story-builder/story-builder.component';
 
@@ -31,7 +32,7 @@ import 'hammerjs';
     BrowserAnimationsModule,
     CustomMaterialImportModule
   ],
-  providers: [],
+  providers: [StoriesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
