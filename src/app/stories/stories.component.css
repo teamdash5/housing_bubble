@@ -1,4 +1,3 @@
-
 h1 {
     text-align: center;
     margin: 1em;
@@ -9,7 +8,7 @@ h1 {
 }
 
 .plot {
-    padding: 10%;
+    padding: 0 10% 10% 10%;
     max-width: 1000px;
     margin: auto;
 }
@@ -27,8 +26,12 @@ h1 {
 Every 4th child, starting at the 3rd one.
 This is because we have separators between each story item which we don't want to be counted when deciding whether to reverse a stories layout or not.
 */
-.story:nth-child(4n+3) {
+.story-wrapper:nth-child(odd) .story {
     flex-direction: row-reverse;
+}
+
+.story-wrapper:last-child .separator {
+    display: none;
 }
 
 .story .icon {
