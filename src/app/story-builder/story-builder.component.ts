@@ -14,11 +14,12 @@ export class StoryBuilderComponent implements OnInit {
   constructor(private _storiesService: StoriesService, private _router: Router) { }
 
   ngOnInit() {
-    const lifeTime = LifeTime.CreateLifeTime('Builder', 'Female', 'Unit', 1990);
-    this._storiesService.buildStories(lifeTime);
+    
   }
 
   triggerBuildStories($event): void {
+    const lifeTime = LifeTime.CreateLifeTime('Builder', 'Female', 'Unit', 1990);
+    this._storiesService.buildStories(lifeTime);
     this._router.navigate(['/stories']);
   }
 }
