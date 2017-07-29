@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LifeTimeRequestComponent } from './life-time-request.component';
+import { StoryBuilderComponent } from './story-builder.component';
 
 describe('LifeTimeRequestComponent', () => {
-  let component: LifeTimeRequestComponent;
-  let fixture: ComponentFixture<LifeTimeRequestComponent>;
+  let component: StoryBuilderComponent;
+  let fixture: ComponentFixture<StoryBuilderComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LifeTimeRequestComponent ]
+      declarations: [ StoryBuilderComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LifeTimeRequestComponent);
+    fixture = TestBed.createComponent(StoryBuilderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

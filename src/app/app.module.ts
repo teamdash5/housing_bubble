@@ -8,8 +8,8 @@ import { AppComponent } from './app.component';
 import { StoryBoardComponent } from './story-board/story-board.component';
 import { StoriesComponent } from './stories/stories.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { LifeTimeRequestComponent } from './life-time-request/life-time-request.component';
-import { RouterModuleModule } from './router-module/router-module.module';
+import { StoryBuilderComponent } from './story-builder/story-builder.component';
+import { AppRoutingModule } from './app-routing/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -17,13 +17,13 @@ import { RouterModuleModule } from './router-module/router-module.module';
     StoryBoardComponent,
     StoriesComponent,
     PageNotFoundComponent,
-    LifeTimeRequestComponent
+    StoryBuilderComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModuleModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

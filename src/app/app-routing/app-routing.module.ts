@@ -6,11 +6,11 @@ import { AppComponent } from '../app.component';
 import { StoryBoardComponent } from '../story-board/story-board.component';
 import { StoriesComponent } from '../stories/stories.component';
 import { PageNotFoundComponent } from '../page-not-found/page-not-found.component';
-import { LifeTimeRequestComponent } from '../life-time-request/life-time-request.component';
+import { StoryBuilderComponent } from '../story-builder/story-builder.component';
 
 const appRoutes: Routes = [
   { path: 'stories', component: StoriesComponent },
-  { path: 'buildyourstories', component: LifeTimeRequestComponent },
+  { path: 'buildyourstories', component: StoryBuilderComponent },
   // {
   //   path: 'heroes',
   //   component: HeroListComponent,
@@ -36,4 +36,4 @@ const appRoutes: Routes = [
   ],
   declarations: []
 })
-export class RouterModuleModule { }
+export class AppRoutingModule { }
