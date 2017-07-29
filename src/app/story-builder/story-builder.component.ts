@@ -18,8 +18,7 @@ export class StoryBuilderComponent implements OnInit {
   }
 
   triggerBuildStories($event): void {
-    // const lifeTime = LifeTime.CreateLifeTime('Builder', 'Female', 'Unit', 1987);
-    const lifeTime = LifeTime.CreateLifeTime('Builder', 'Male', 'Unit', 1958);
+    const lifeTime = LifeTime.CreateLifeTime('Builder', 'Male', 'Unit', 1958, 'University');
     this._storiesService.buildStories(lifeTime);
     this._router.navigate(['/stories']);
   }

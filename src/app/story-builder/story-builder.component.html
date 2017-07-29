@@ -1,1 +1,17 @@
+<div class="outer-wrapper">
+  <div class="wrapper">
+    <div class="cell" *ngFor="let answer of currentQuestion.answers">
+      <img src="{{ answer.icon }}" />
+      {{ answer.label }}
+    </div>
+  </div>
+  <div class="centre">{{currentQuestion.icon}}</div>
+</div>
+
+<div class="breadcrumb">
+  <div class="item">Breadcrumb First</div>
+  <div class="item">Breadcrumb Second</div>
+  <div class="item">Breadcrumb Third</div>
+</div>
+
 <button md-raised-button (click)="triggerBuildStories($event)">Show my stories!</button>

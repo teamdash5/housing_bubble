@@ -1,16 +1,19 @@
-type Job = 'Nurse' | 'Builder' | 'Teacher' | 'Lawyer';
-type Gender = 'Male' | 'Female';
-type PropertyType = 'House' | 'Unit';
+export type Job = 'Nurse' | 'Builder' | 'Teacher' | 'Lawyer';
+export type Gender = 'Male' | 'Female';
+export type PropertyType = 'House' | 'Unit';
+export type Education = 'TAFE' | 'High School' | 'Primary School' | 'University';
 
 export const JOBS = ['Nurse', 'Builder', 'Teacher', 'Lawyer'];
 export const GENDER = ['Male', 'Female'];
 export const PROPERTY_TYPES = ['House', 'Unit'];
+export const EDUCATIONS = ['TAFE', 'High School', 'Primary School', 'University'];
 
 export class LifeTime {
   private _job: Job;
   private _gender: Gender;
   private _propertyType: PropertyType;
   private _yob: number;
+  private _education: Education;
 
   public get job(): Job {
     return this._job;
@@ -20,12 +23,16 @@ export class LifeTime {
     return this._gender;
   }
 
-  public get PropertyType(): PropertyType {
+  public get propertyType(): PropertyType {
     return this._propertyType;
   }
 
-  public get YearOfBirth(): number {
+  public get yearOfBirth(): number {
     return this._yob;
+  }
+
+  public get education(): Education {
+    return this._education;
   }
 
   private get infoAboutLife(): InfoAboutLife {
@@ -56,12 +63,13 @@ export class LifeTime {
     return this.infoAboutLife.positiveNewsEventFromLife
   }
 
-  public static CreateLifeTime(job: Job, gender: Gender, propertyType: PropertyType, yob: number): LifeTime {
+  public static CreateLifeTime(job: Job, gender: Gender, propertyType: PropertyType, yob: number, education: Education): LifeTime {
     const lifeTime = new LifeTime();
     lifeTime._job = job;
     lifeTime._gender = gender;
     lifeTime._propertyType = propertyType;
     lifeTime._yob = yob;
+    lifeTime._education = education;
     return lifeTime;
   }
 }

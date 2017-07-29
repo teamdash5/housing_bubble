@@ -18,7 +18,7 @@ export class Plot {
     const plot = new Plot();
     // TODO: do something smart about plotting your lifetime.
     plot._stories = [
-      Story.createStory(`Born in ${lifeTime.YearOfBirth}...`),
+      Story.createStory(`Born in ${lifeTime.yearOfBirth}...`),
       Story.createStory(`... ${lifeTime.pronounHeShe} grew up playing ${lifeTime.gamesFromYouth}... `),
       Story.createStory(`... and listening to ${lifeTime.musicFromTeens}.`),
       Story.createStory(`${lifeTime.pronounHeShe} had the misfortune to be there for ${lifeTime.annoyingNewsEventFromLife}...`),
