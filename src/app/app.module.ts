@@ -13,6 +13,7 @@ import { StoryBuilderComponent } from './story-builder/story-builder.component';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { CustomMaterialImportModule } from './custom-material-import/custom-material-import.module';
+import 'hammerjs';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CustomMaterialImportModule } from './custom-material-import/custom-mate
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CustomMaterialImportModule
   ],
   providers: [],
   bootstrap: [AppComponent]

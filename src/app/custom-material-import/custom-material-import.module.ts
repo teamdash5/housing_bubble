@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MdButtonModule } from '@angular/material';
+import { MdButtonModule, MdToolbarModule } from '@angular/material';
 
 @NgModule({
   imports: [
     CommonModule,
-    MdButtonModule
+    MdButtonModule,
+    MdToolbarModule
   ],
   exports: [
-    MdButtonModule
+    MdButtonModule,
+    MdToolbarModule
   ],
   declarations: []
 })
