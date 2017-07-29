@@ -28,6 +28,26 @@ export class LifeTime {
     return this._yob;
   }
 
+  private get infoAboutLife(): InfoAboutLife {
+    return this._yob < 1987 ? babyBoomerInfo : genXInfo;
+  }
+
+  public get gamesFromYouth(): string {
+    return this.infoAboutLife.gamesFromYouth
+  }
+
+  public get musicFromTeens(): string {
+    return this.infoAboutLife.musicFromTeens
+  }
+
+  public get annoyingNewsEventFromLife(): string {
+    return this.infoAboutLife.annoyingNewsEventFromLife
+  }
+
+  public get positiveNewsEventFromLife(): string {
+    return this.infoAboutLife.positiveNewsEventFromLife
+  }
+
   public static CreateLifeTime(job: Job, gender: Gender, propertyType: PropertyType, yob: number): LifeTime {
     const lifeTime = new LifeTime();
     lifeTime._job = job;
@@ -38,3 +58,23 @@ export class LifeTime {
   }
 }
 
+type InfoAboutLife = {
+  gamesFromYouth: string, // "They grew up playing {{ gamesFromYouth }}..."
+  musicFromTeens: string, // "... and listening to {{ musicFromTeens }}."
+  annoyingNewsEventFromLife: string, // "They had the misfortune to be there for {{ annoyingNewsEventFromLife }}..."
+  positiveNewsEventFromLife: string, // "... but they also witnessed {{ positiveNewsEventFromLife }}."
+}
+
+const babyBoomerInfo:InfoAboutLife = {
+  gamesFromYouth: "G.I. Joe and with Etch-a-Sketch",
+  musicFromTeens: "The Beatles and Elvis",
+  annoyingNewsEventFromLife: "the debut of Rick Astley's \"Never Gonna Give you up\"",
+  positiveNewsEventFromLife: "the collapse of the Berlin Wall",
+}
+
+const genXInfo:InfoAboutLife = {
+  gamesFromYouth: "Playstation and Nintendo",
+  musicFromTeens: "Spice Girls and Nirvana",
+  annoyingNewsEventFromLife: "Meat Loaf singing in the AFL grand final",
+  positiveNewsEventFromLife: "the national apology to the stolen generation",
+}
