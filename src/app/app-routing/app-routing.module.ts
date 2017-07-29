@@ -7,9 +7,10 @@ import { StoryBoardComponent } from '../story-board/story-board.component';
 import { StoriesComponent } from '../stories/stories.component';
 import { PageNotFoundComponent } from '../page-not-found/page-not-found.component';
 import { StoryBuilderComponent } from '../story-builder/story-builder.component';
+import { StoriesGuard } from '../stories/stories.guard';
 
 const appRoutes: Routes = [
-  { path: 'stories', component: StoriesComponent },
+  { path: 'stories', component: StoriesComponent, canActivate: [StoriesGuard] },
   { path: 'buildyourstories', component: StoryBuilderComponent },
   // {
   //   path: 'heroes',
@@ -34,6 +35,9 @@ const appRoutes: Routes = [
   exports: [
     RouterModule
   ],
-  declarations: []
+  declarations: [],
+  providers: [
+    StoriesGuard
+  ]
 })
 export class AppRoutingModule { }

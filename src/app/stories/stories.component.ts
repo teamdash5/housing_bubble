@@ -13,11 +13,8 @@ export class StoriesComponent implements OnInit {
   constructor(private _storiesService: StoriesService) { }
 
   ngOnInit() {
-    const lifeTime = LifeTime.CreateLifeTime('Builder', 'Female', 'Unit', 1990);
-    this._storiesService.buildStories(lifeTime);
     this._storiesService.plot.subscribe(p => {
       this.plot = p;
-    });
-    
+    });  
   }
 }
