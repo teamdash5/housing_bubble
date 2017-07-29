@@ -1,3 +1,21 @@
-<div *ngFor="let story of plot.stories">
-  {{story | json}}
+<h1>Their story...</h1>
+<div class="plot">
+
+  <div *ngFor="let story of plot.stories">
+    
+    <div class="story">
+
+      <div class="icon">Icon</div>
+      
+      <div class="blurb">
+        {{ story.description }}
+        <pre>{{story | json }}</pre>
+      </div>
+
+    </div>
+ 
+    <div class="separator">...</div>
+
+  </div>
+
 </div>

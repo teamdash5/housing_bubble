@@ -1,0 +1,54 @@
+
+h1 {
+    text-align: center;
+    margin: 1em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.plot {
+    padding: 10%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.story {
+    width: 100%;
+    border: solid 1px red;
+    padding: 20px;
+
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+/*
+Every 4th child, starting at the 3rd one.
+This is because we have separators between each story item which we don't want to be counted when deciding whether to reverse a stories layout or not.
+*/
+.story:nth-child(4n+3) {
+    flex-direction: row-reverse;
+}
+
+.story .icon {
+    border: solid 1px blue;
+    height: 200px;
+    width: 200px;
+}
+
+.story .blurb {
+    border: solid 1px purple;
+    margin: 0 20px;
+}
+
+.plot .separator {
+    border: solid 1px green;
+    margin: 40px 40%;
+    width: 20%;
+    text-align: center;
+}
+
+.separator .hide {
+    display: none;
+}
