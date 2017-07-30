@@ -44,15 +44,18 @@ export class Plot {
 
       Story.createStory(`After school, ${lifeTime.pronounHeShe} went on an overseas trip to London...`),
 
-      Story.createStory(`... costing ${'blah'}% of ${lifeTime.pronounHisHer} house deposit!`),
+      Story.createStory(`... costing ${'TODO'}% of ${lifeTime.pronounHisHer} house deposit!`),
 
       Story.createStory(`Upon returning, ${lifeTime.pronounHeShe} started saving for ${lifeTime.pronounHisHer} first house with a salary of ${lifeTime.salary}...`),
 
-      Story.createStory(`...it took ${lifeTime.weeksToSaveDeposit} weeks (without spending money on rent, clothing, or even food!) to save a 20% deposit.`),
+      Story.createStory(`...it took ${lifeTime.weeksToSaveDeposit} weeks (without paying tax, rent, or eating!) to save a 20% deposit.`),
 
-      Story.createStory(`Once purchased, ${lifeTime.pronounHeShe} spent ${lifeTime.percentageOfIncomeOnMortgage} of ${lifeTime.pronounHisHer} pre-tax income on portgage repayments.`),
+      Story.createStory(`Once purchased, ${lifeTime.pronounHeShe} spent ${lifeTime.percentageOfIncomeOnMortgage} of ${lifeTime.pronounHisHer} pre-tax income on mortgage repayments.`),
 
-      Story.createStory(`For ${lifeTime.pronounHisHer} troubles, they gave the bank ... blah blah interest vs principle.`),
+      Story.createStory(`Thanks to an interest rate of ${lifeTime.interestRate}...`),
+      
+      Story.createStory(`... ${lifeTime.pronounHeShe} paid the bank ${lifeTime.totalHouseInterest} in interest, which is ${lifeTime.percentageHouseInterest} of all money they paid`),
+      
     ];
 
     plot._lifeTime = lifeTime

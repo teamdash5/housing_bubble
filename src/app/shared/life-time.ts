@@ -67,6 +67,18 @@ export class LifeTime {
     return this.infoAboutLife.positiveNewsEventFromLife
   }
 
+  public get totalHouseInterest(): string {
+    return this.infoAboutLife.totalHouseInterest
+  }
+
+  public get percentageHouseInterest(): string {
+    return this.infoAboutLife.percentageHouseInterest
+  }
+
+  public get interestRate(): string {
+    return this.infoAboutLife.interestRate
+  }
+
   public get salary(): string {
     return this.infoAboutLife.salary(this.gender)
   }
@@ -99,6 +111,9 @@ type InfoAboutLife = {
   salary: (gender:Gender) => string, // Include '$' at start, and commas between thousands.
   percentageOfIncomeOnMortgage: (gender:Gender) => string, // Include '%' at the end
   weeksToSaveDeposit: (gender:Gender) => number,
+  totalHouseInterest: string,
+  percentageHouseInterest: string,
+  interestRate: string,
 }
 
 const babyBoomerInfo:InfoAboutLife = {
@@ -110,6 +125,9 @@ const babyBoomerInfo:InfoAboutLife = {
   salary: (gender) => gender === 'Male' ? '$27,164' : '$21,434',
   percentageOfIncomeOnMortgage: (gender) => gender === 'Male' ? '40%' : '',
   weeksToSaveDeposit: (gender) => gender === 'Male' ? 36.37 : 46.09,
+  totalHouseInterest: '$67,308.65',
+  percentageHouseInterest: '70.85%',
+  interestRate: '14.08%',
 }
 
 const genXInfo:InfoAboutLife = {
@@ -121,4 +139,7 @@ const genXInfo:InfoAboutLife = {
   salary: (gender) => gender === 'Male' ? '$83,902' : '$70,392',
   percentageOfIncomeOnMortgage: (gender) => gender == 'Male' ? '34%' : '',
   weeksToSaveDeposit: (gender) => gender === 'Male' ? 68.17 : 81.26,
+  totalHouseInterest: '$196,671.18',
+  percentageHouseInterest: '35.76%',
+  interestRate: '5.06%',
 }
