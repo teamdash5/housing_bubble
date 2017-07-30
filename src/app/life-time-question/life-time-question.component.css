@@ -4,7 +4,7 @@
     top: 50%;
     width: 100px;
     height: 100px;
-    border: solid 1px lightgray;
+    border: solid 3px grey;
     margin-left: -50px;
     margin-top: -50px;
     text-align: center;
@@ -33,6 +33,7 @@
 .wrapper .cell:hover {
     font-weight: bold;
     text-decoration: underline;
+    background-size: auto 70% !important;
 }
 
 .wrapper .cell {
@@ -49,6 +50,11 @@
     background-size: auto 60%;
 }
 
+.wrapper .cell.Female-2050 {
+    background: url('/assets/images/2020-Female.jpg') no-repeat center center;
+    background-size: auto 60%;
+}
+
 .wrapper .cell.Male-1988 {
     background: url('/assets/images/1988-Male.jpg') no-repeat center center;
     background-size: auto 60%;
@@ -56,5 +62,10 @@
 
 .wrapper .cell.Male-2017 {
     background: url('/assets/images/2017-Male.jpg') no-repeat center center;
+    background-size: auto 60%;
+}
+
+.wrapper .cell.Male-2050 {
+    background: url('/assets/images/2020-Male.jpg') no-repeat center center;
     background-size: auto 60%;
 }
