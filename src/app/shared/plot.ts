@@ -54,7 +54,7 @@ export class Plot {
 
       Story.createStory(
         `After getting a job, ${lifeTime.pronounHeShe} started saving for ${lifeTime.pronounHisHer} first house with a salary of ${lifeTime.salary}...`,
-
+        images.house
       ),
 
       Story.createStory(
@@ -96,14 +96,7 @@ type StoryImages = {
   annoyingNewsEventFromLife: string,
   positiveNewsEventFromLife: string,
   moneySpent: string,
-}
-
-const genXimages:StoryImages = {
-  gamesFromYouth: Math.random() > 0.5 ? 'PS1.jpg' : 'SNES.jpg',
-  musicFromTeens: Math.random() > 0.5 ? 'Nirvana.jpg' : 'Spice Girls 2.jpg',
-  annoyingNewsEventFromLife: 'Meatloaf.png',
-  positiveNewsEventFromLife: 'Sorry_Day_poster.jpg',
-  moneySpent: 'small money pile.jpeg',
+  house: string,
 }
 
 const babyBoomerImages:StoryImages = {
@@ -112,6 +105,16 @@ const babyBoomerImages:StoryImages = {
   annoyingNewsEventFromLife: 'Rick Astley.jpg',
   positiveNewsEventFromLife: 'Berlin Wall.jpg',
   moneySpent: 'big money pile.jpg',
+  house: '80s house.jpg',
+}
+
+const genXimages:StoryImages = {
+  gamesFromYouth: Math.random() > 0.5 ? 'PS1.jpg' : 'SNES.jpg',
+  musicFromTeens: Math.random() > 0.5 ? 'Nirvana.jpg' : 'Spice Girls 2.jpg',
+  annoyingNewsEventFromLife: 'Meatloaf.png',
+  positiveNewsEventFromLife: 'Sorry_Day_poster.jpg',
+  moneySpent: 'small money pile.jpeg',
+  house: 'modern house.jpg',
 }
 
 const futureImages:StoryImages = {
@@ -120,4 +123,5 @@ const futureImages:StoryImages = {
   annoyingNewsEventFromLife: 'kitten flu.jpg',
   positiveNewsEventFromLife: 'trump.png',
   moneySpent: 'trump.png',
+  house: 'future house.jpg',
 }
