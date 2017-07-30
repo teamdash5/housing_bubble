@@ -62,7 +62,7 @@ export class LifeTime {
   }
 
   private get infoAboutLife(): InfoAboutLife {
-    return this._yob < 1987 ? babyBoomerInfo : genXInfo;
+    return this._yob < 1980 ? babyBoomerInfo : (this._yob < 2000 ? genXInfo : futureInfo);
   }
 
   public get name(): string {

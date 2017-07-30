@@ -103,7 +103,7 @@ const genXimages:StoryImages = {
   musicFromTeens: Math.random() > 0.5 ? 'Nirvana.jpg' : 'Spice Girls 2.jpg',
   annoyingNewsEventFromLife: 'Meatloaf.png',
   positiveNewsEventFromLife: 'Sorry_Day_poster.jpg',
-  moneySpent: 'small money pile.jpg',
+  moneySpent: 'small money pile.jpeg',
 }
 
 const babyBoomerImages:StoryImages = {
