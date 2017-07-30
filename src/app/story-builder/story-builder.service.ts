@@ -22,7 +22,7 @@ export class StoryBuilderService {
     this.init();
   }
 
-  private init(withFuture: boolean = true): void {
+  public init(withFuture: boolean = true): void {
     this._questions = {
       genderAge: withFuture ? GenderAgeQuestion.createFutureGenderAgeQuestions() : GenderAgeQuestion.createGenderAgeQuestions(),
       education: EducationQuestion.createEducationQuestion(),

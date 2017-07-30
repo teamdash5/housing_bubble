@@ -35,7 +35,7 @@ export const YEAR_OF_PURCHASES: YearOfPurchase[] = [1988, 2017];
 export const FUTURE_YEAR_OF_PURCHAES: YearOfPurchase = 2050;
 export type GenderAge = {
   gender: Gender,
-  age: YearOfPurchase
+  yearOfPurchase: YearOfPurchase
 };
 
 export class GenderAgeAnswer extends LifeTimeAnswer<GenderAge> {
@@ -53,14 +53,14 @@ export class GenderAgeAnswer extends LifeTimeAnswer<GenderAge> {
   private static buildGenderAgeAnswers(yearOfPurchase: YearOfPurchase): GenderAgeAnswer[] {
     return GENDER.map(g => {
         const answer = new GenderAgeAnswer();
-        answer._label = { gender: g as Gender, age: yearOfPurchase } as GenderAge;
+        answer._label = { gender: g as Gender, yearOfPurchase: yearOfPurchase } as GenderAge;
         answer._icon = `${g}-${yearOfPurchase}`;
         return answer;
       });
   }
 
   public get description(): string {
-    return getName(this._label.gender, this._label.age - 30) + ", buying a house in " + this._label.age;
+    return getName(this._label.gender, this._label.yearOfPurchase - 30) + ", buying a house in " + this._label.yearOfPurchase;
   }
 
   constructor() {

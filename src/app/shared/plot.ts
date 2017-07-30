@@ -17,7 +17,7 @@ export class Plot {
   public static createPlot(lifeTime: LifeTime): Plot {
     const plot = new Plot();
 
-    const images:StoryImages = lifeTime.yearOfBirth < 1990 ? earlyImages : lateImages
+    const images:StoryImages = lifeTime.yearOfBirth < 1980 ? babyBoomerImages : (lifeTime.yearOfBirth < 2000 ? genXimages : futureImages)
 
     plot._stories = [
       Story.createStory(`Born in ${lifeTime.yearOfBirth}...`),
@@ -42,21 +42,45 @@ export class Plot {
         images.positiveNewsEventFromLife
       ),
 
-      Story.createStory(`After school, ${lifeTime.pronounHeShe} went on an overseas trip to London...`),
-
-      Story.createStory(`... costing ${'TODO'}% of ${lifeTime.pronounHisHer} house deposit!`),
-
-      Story.createStory(`Upon returning, ${lifeTime.pronounHeShe} started saving for ${lifeTime.pronounHisHer} first house with a salary of ${lifeTime.salary}...`),
-
-      Story.createStory(`...it took ${lifeTime.weeksToSaveDeposit} weeks (without paying tax, rent, or eating!) to save a 20% deposit.`),
-
-      Story.createStory(`Once purchased, ${lifeTime.pronounHeShe} spent ${lifeTime.percentageOfIncomeOnMortgage} of ${lifeTime.pronounHisHer} pre-tax income on mortgage repayments.`),
-
-      Story.createStory(`Thanks to an interest rate of ${lifeTime.interestRate}...`),
+      /*Story.createStory(
+        `After school, ${lifeTime.pronounHeShe} went on an overseas trip to London...`
       
-      Story.createStory(`... ${lifeTime.pronounHeShe} paid the bank ${lifeTime.totalHouseInterest} in interest, which is ${lifeTime.percentageHouseInterest} of all money ${lifeTime.pronounHeShe} generously paid the bank.`),
+      ),
+
+      Story.createStory(
+        `... costing ${'TODO'}% of ${lifeTime.pronounHisHer} house deposit!`
       
-      Story.createStory(`Hmmm. It seems like it was pretty tough for ${lifeTime.name} to buy a house. I wonder if anyone else found it any easier?`),
+      ),*/
+
+      Story.createStory(
+        `After getting a job, ${lifeTime.pronounHeShe} started saving for ${lifeTime.pronounHisHer} first house with a salary of ${lifeTime.salary}...`,
+
+      ),
+
+      Story.createStory(
+        `...it took ${lifeTime.weeksToSaveDeposit} weeks (without paying tax, rent, or eating!) to save a 20% deposit.`,
+      
+      ),
+
+      Story.createStory(
+        `Once purchased, ${lifeTime.pronounHeShe} spent ${lifeTime.percentageOfIncomeOnMortgage} of ${lifeTime.pronounHisHer} pre-tax income on mortgage repayments.`,
+        images.moneySpent
+      ),
+
+      Story.createStory(
+        `Thanks to an interest rate of ${lifeTime.interestRate}...`,
+      
+      ),
+      
+      Story.createStory(
+        `... ${lifeTime.pronounHeShe} paid the bank ${lifeTime.totalHouseInterest} in interest, which is ${lifeTime.percentageHouseInterest} of all money ${lifeTime.pronounHeShe} generously paid the bank.`,
+
+      ),
+      
+      Story.createStory(
+        `Hmmm. It seems like it was pretty tough for ${lifeTime.name} to buy a house. I wonder if anyone else found it any easier?`,
+      
+      ),
 
     ];
 
@@ -71,18 +95,29 @@ type StoryImages = {
   musicFromTeens: string,
   annoyingNewsEventFromLife: string,
   positiveNewsEventFromLife: string,
+  moneySpent: string,
 }
 
-const earlyImages:StoryImages = {
+const genXimages:StoryImages = {
   gamesFromYouth: Math.random() > 0.5 ? 'PS1.jpg' : 'SNES.jpg',
   musicFromTeens: Math.random() > 0.5 ? 'Nirvana.jpg' : 'Spice Girls 2.jpg',
   annoyingNewsEventFromLife: 'Meatloaf.png',
   positiveNewsEventFromLife: 'Sorry_Day_poster.jpg',
+  moneySpent: 'small money pile.jpg',
 }
 
-const lateImages:StoryImages = {
+const babyBoomerImages:StoryImages = {
   gamesFromYouth: 'Etch-a-sketch.jpg',
   musicFromTeens: Math.random() > 0.5 ? 'Elvis.jpg' : 'The Beatles.jpg',
   annoyingNewsEventFromLife: 'Rick Astley.jpg',
   positiveNewsEventFromLife: 'Berlin Wall.jpg',
+  moneySpent: 'big money pile.jpg',
+}
+
+const futureImages:StoryImages = {
+  gamesFromYouth: 'ipad.png',
+  musicFromTeens: 'justin bieber.jpg',
+  annoyingNewsEventFromLife: 'kitten flu.jpg',
+  positiveNewsEventFromLife: 'trump.png',
+  moneySpent: 'trump.png',
 }

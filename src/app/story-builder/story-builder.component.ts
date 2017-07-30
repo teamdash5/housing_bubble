@@ -38,10 +38,10 @@ export class StoryBuilderComponent implements OnInit {
     
     const job:Job = 'Builder';
     const gender = this.questions.genderAge.selectedAnswer.label.gender;
-    const age = +this.questions.genderAge.selectedAnswer.label.age;
+    const yearOfBirth = this.questions.genderAge.selectedAnswer.label.yearOfPurchase - 30;
     const propertyType = this.questions.propertyTypes.selectedAnswer.label;
     const education = this.questions.education.selectedAnswer.label;
-    const lifeTime = LifeTime.CreateLifeTime(job, gender, propertyType, age, education);
+    const lifeTime = LifeTime.CreateLifeTime(job, gender, propertyType, yearOfBirth, education);
     this._storiesService.buildStories(lifeTime);
     this._router.navigate(['/stories']);
   }

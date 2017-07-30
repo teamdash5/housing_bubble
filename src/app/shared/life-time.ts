@@ -14,7 +14,7 @@ export const getName = (gender: Gender, yob: number) => {
 
     if (yob < 1980) {
       return "Daniel";
-    } else if (yob < 2020) {
+    } else if (yob < 2000) {
       return "Pete"
     } else {
       return "Jax"
@@ -24,7 +24,7 @@ export const getName = (gender: Gender, yob: number) => {
 
     if (yob < 1980) {
       return "Dora";
-    } else if (yob < 2020) {
+    } else if (yob < 2000) {
       return "Laura"
     } else {
       return "Lyla"
@@ -33,7 +33,6 @@ export const getName = (gender: Gender, yob: number) => {
   }
 
 }
-
 
 export class LifeTime {
   private _job: Job;
@@ -148,7 +147,7 @@ const babyBoomerInfo:InfoAboutLife = {
   annoyingNewsEventFromLife: "the debut of Rick Astley's \"Never Gonna Give you up\"",
   positiveNewsEventFromLife: "the collapse of the Berlin Wall",
   salary: (gender) => gender === 'Male' ? '$27,164' : '$21,434',
-  percentageOfIncomeOnMortgage: (gender) => gender === 'Male' ? '40%' : '',
+  percentageOfIncomeOnMortgage: (gender) => gender === 'Male' ? '40%' : '40%',
   weeksToSaveDeposit: (gender) => gender === 'Male' ? 36.37 : 46.09,
   totalHouseInterest: '$67,308.65',
   percentageHouseInterest: '70.85%',
@@ -161,7 +160,20 @@ const genXInfo:InfoAboutLife = {
   annoyingNewsEventFromLife: "Meat Loaf singing in the AFL grand final",
   positiveNewsEventFromLife: "the national apology to the stolen generation",
   salary: (gender) => gender === 'Male' ? '$83,902' : '$70,392',
-  percentageOfIncomeOnMortgage: (gender) => gender == 'Male' ? '34%' : '',
+  percentageOfIncomeOnMortgage: (gender) => gender == 'Male' ? '34%' : '34%',
+  weeksToSaveDeposit: (gender) => gender === 'Male' ? 68.17 : 81.26,
+  totalHouseInterest: '$196,671.18',
+  percentageHouseInterest: '35.76%',
+  interestRate: '5.06%',
+}
+
+const futureInfo:InfoAboutLife = {
+  gamesFromYouth: "iPad",
+  musicFromTeens: "Justin Bieber Jr",
+  annoyingNewsEventFromLife: "the worldwide epidemic of Kitten Flu",
+  positiveNewsEventFromLife: "the impeachment of Donald Trump",
+  salary: (gender) => '$344,759',
+  percentageOfIncomeOnMortgage: (gender) => '',
   weeksToSaveDeposit: (gender) => gender === 'Male' ? 68.17 : 81.26,
   totalHouseInterest: '$196,671.18',
   percentageHouseInterest: '35.76%',

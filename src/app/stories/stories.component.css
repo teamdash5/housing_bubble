@@ -66,4 +66,5 @@ This is because we have separators between each story item which we don't want t
 
 .try-again {
     margin: auto;
+    color: blue;
 }
