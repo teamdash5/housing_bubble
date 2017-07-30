@@ -19,7 +19,17 @@ h1 {
 
 .gender-question {
     background: url("/assets/images/gender.png") no-repeat center center;
-    background-size: contain; 
+    background-size: contain;
+}
+
+.education-question {
+    background: url("/assets/images/Mortarboard.svg.png") no-repeat center center;
+    background-size: contain;
+}
+
+.property-question {
+    background: url("/assets/images/property-question.png") no-repeat center center;
+    background-size: contain;
 }
 
 .wrapper {

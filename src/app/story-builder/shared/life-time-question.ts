@@ -30,7 +30,7 @@ export class PropertyTypeQuestion extends LifeTimeQuestion<PropertyType> {
   public static createPropertyTypeQuestion(): PropertyTypeQuestion {
     const question = new PropertyTypeQuestion();
     question._answers = PropertyTypeAnswer.createPropertyTypeAnswers();
-    question._icon = '';
+    question._icon = 'property-question';
     return question;
   }
 
@@ -57,7 +57,7 @@ export class GenderAgeQuestion extends LifeTimeQuestion<GenderAge> {
   public static createGenderAgeQuestions(): GenderAgeQuestion {
     const lifeTimeQuestion = new GenderAgeQuestion();
     lifeTimeQuestion._answers = GenderAgeAnswer.createGenderAgeAnswers();
-    lifeTimeQuestion._icon = '';
+    lifeTimeQuestion._icon = 'gender-question';
     return lifeTimeQuestion;
   }
 
@@ -77,7 +77,7 @@ export class EducationQuestion extends LifeTimeQuestion<Education> {
   public static createEducationQuestion(): EducationQuestion {
     const question = new EducationQuestion();
     question._answers = EducationAnswer.createEducationAnswers();
-    question._icon = '';
+    question._icon = 'education-question';
     return question;
   }
 
