@@ -75,6 +75,10 @@ export class LifeTime {
     return this.infoAboutLife.percentageOfIncomeOnMortgage(this.gender)
   }
 
+  public get weeksToSaveDeposit(): number {
+    return this.infoAboutLife.weeksToSaveDeposit(this.gender)
+  }
+
   public static CreateLifeTime(job: Job, gender: Gender, propertyType: PropertyType, yob: number, education: Education): LifeTime {
     const lifeTime = new LifeTime();
     lifeTime._job = job;
@@ -94,6 +98,7 @@ type InfoAboutLife = {
   name: (gender:Gender) => string, // Returns a common name for this generation.
   salary: (gender:Gender) => string, // Include '$' at start, and commas between thousands.
   percentageOfIncomeOnMortgage: (gender:Gender) => string, // Include '%' at the end
+  weeksToSaveDeposit: (gender:Gender) => number,
 }
 
 const babyBoomerInfo:InfoAboutLife = {
@@ -104,6 +109,7 @@ const babyBoomerInfo:InfoAboutLife = {
   name: (gender) => gender === "Male" ? "Daniel" : "Dora",
   salary: (gender) => gender === 'Male' ? '$27,164' : '$21,434',
   percentageOfIncomeOnMortgage: (gender) => gender === 'Male' ? '40%' : '',
+  weeksToSaveDeposit: (gender) => gender === 'Male' ? 36.37 : 46.09,
 }
 
 const genXInfo:InfoAboutLife = {
@@ -114,4 +120,5 @@ const genXInfo:InfoAboutLife = {
   name: (gender:Gender) => gender === "Female" ? "Laura" : "Pete",
   salary: (gender) => gender === 'Male' ? '$83,902' : '$70,392',
   percentageOfIncomeOnMortgage: (gender) => gender == 'Male' ? '34%' : '',
+  weeksToSaveDeposit: (gender) => gender === 'Male' ? 68.17 : 81.26,
 }

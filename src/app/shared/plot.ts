@@ -48,7 +48,7 @@ export class Plot {
 
       Story.createStory(`Upon returning, ${lifeTime.pronounHeShe} started saving for ${lifeTime.pronounHisHer} first house with a salary of ${lifeTime.salary}...`),
 
-      Story.createStory(`...it took ${'blah'} weeks (without spending money on rent, clothing, or even food!) to save a 20% deposit.`),
+      Story.createStory(`...it took ${lifeTime.weeksToSaveDeposit} weeks (without spending money on rent, clothing, or even food!) to save a 20% deposit.`),
 
       Story.createStory(`Once purchased, ${lifeTime.pronounHeShe} spent ${lifeTime.percentageOfIncomeOnMortgage} of ${lifeTime.pronounHisHer} pre-tax income on portgage repayments.`),
 
