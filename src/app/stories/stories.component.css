@@ -63,3 +63,7 @@ This is because we have separators between each story item which we don't want t
 .story-wrapper:nth-child(odd) .separator {
     transform: scaleX(-1);
 }
+
+.try-again {
+    margin: auto;
+}

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Inject, Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { DOCUMENT } from '@angular/platform-browser';
 import { PageScrollService, PageScrollInstance, EasingLogic } from 'ng2-page-scroll'
 import { StoriesService } from './stories.service';
@@ -14,12 +15,16 @@ import { LifeTime } from '../shared/life-time';
 export class StoriesComponent implements OnInit {
   
   plot: Plot;
-  constructor(private _storiesService: StoriesService , private _pageScrollService: PageScrollService, @Inject(DOCUMENT) private document: any) { }
+  constructor(private _storiesService: StoriesService, private _router: Router, private _pageScrollService: PageScrollService, @Inject(DOCUMENT) private document: any) { }
 
   ngOnInit() {
     this._storiesService.plot.subscribe(p => {
       this.plot = p;
     });
+  }
+
+  tryAgain($event) {
+      this._router.navigate(['/buildyourstories'])
   }
 
   ngAfterViewInit() {

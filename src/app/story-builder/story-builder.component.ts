@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { StoriesService } from '../stories/stories.service';
-import { LifeTime } from '../shared/life-time';
+import { LifeTime, Job } from '../shared/life-time';
 import { StoryBuilderQuestions, AnsweringProgress, StoryBuilderService } from './story-builder.service';
 import { LifeTimeQuestion, EducationQuestion, GenderAgeQuestion, PropertyTypeQuestion, JobQuestion } from './shared/life-time-question';
 import { GenderAge, GenderAgeAnswer, EducationAnswer, PropertyTypeAnswer } from './shared/life-time-answer';
@@ -35,8 +35,8 @@ export class StoryBuilderComponent implements OnInit {
     if (this.progress !== 3) {
       return;
     }
-
-    const job = 'Builder';
+    
+    const job:Job = 'Builder';
     const gender = this.questions.genderAge.selectedAnswer.label.gender;
     const age = +this.questions.genderAge.selectedAnswer.label.age;
     const propertyType = this.questions.propertyTypes.selectedAnswer.label;

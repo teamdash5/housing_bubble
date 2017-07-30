@@ -54,8 +54,10 @@ export class Plot {
 
       Story.createStory(`Thanks to an interest rate of ${lifeTime.interestRate}...`),
       
-      Story.createStory(`... ${lifeTime.pronounHeShe} paid the bank ${lifeTime.totalHouseInterest} in interest, which is ${lifeTime.percentageHouseInterest} of all money they paid`),
+      Story.createStory(`... ${lifeTime.pronounHeShe} paid the bank ${lifeTime.totalHouseInterest} in interest, which is ${lifeTime.percentageHouseInterest} of all money ${lifeTime.pronounHeShe} generously paid the bank.`),
       
+      Story.createStory(`Hmmm. It seems like it was pretty tough for ${lifeTime.name} to buy a house. I wonder if anyone else found it any easier?`),
+
     ];
 
     plot._lifeTime = lifeTime
