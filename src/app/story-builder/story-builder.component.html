@@ -1,17 +1,5 @@
 <div class="outer-wrapper" *ngIf="currentQuestion">
-  <div class="wrapper">
-    <div class="cell" *ngFor="let answer of currentQuestion.answers">
-      <img src="{{ answer.icon }}" />
-      {{ answer.description }}
-    </div>
-  </div>
-  <div class="centre">{{currentQuestion.icon}}</div>
-</div>
-
-<div class="breadcrumb">
-  <div class="item">Breadcrumb First</div>
-  <div class="item">Breadcrumb Second</div>
-  <div class="item">Breadcrumb Third</div>
+  <app-life-time-question [question]="currentQuestion" (answerPicked)="pickAnswer($event)"></app-life-time-question>
 </div>
 
 <button md-raised-button (click)="triggerBuildStories($event)">Show my stories!</button>

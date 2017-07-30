@@ -46,7 +46,7 @@ export class StoryBuilderService {
     });
   }
 
-  public updateAnsweringProgress(): void {
+  private updateAnsweringProgress(): void {
     let progress: AnsweringProgress = 0;
     if (this.questions.genderAge.selectedAnswer) {
       progress++;
@@ -65,5 +65,21 @@ export class StoryBuilderService {
 
   public get fetchAnsweringProgress(): Observable<AnsweringProgress> {
     return this._answeringProgress;
+  }
+
+  public selectAnswer($event: GenderAgeAnswer | EducationAnswer | PropertyTypeAnswer): void {
+    if ($event instanceof GenderAgeAnswer) {
+      this.questions.genderAge.selectAnswer($event);
+    }
+
+    if ($event instanceof EducationAnswer) {
+      this.questions.education.selectAnswer($event);
+    }
+
+    if ($event instanceof PropertyTypeAnswer) {
+      this.questions.propertyTypes.selectAnswer($event);
+    }
+
+    this.updateAnsweringProgress();
   }
 }

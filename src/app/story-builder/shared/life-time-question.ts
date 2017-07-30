@@ -33,6 +33,10 @@ export class PropertyTypeQuestion extends LifeTimeQuestion<PropertyType> {
     question._icon = '';
     return question;
   }
+
+  public selectAnswer(answer: PropertyTypeAnswer): void {
+    super.selectAnswer(answer);
+  }
 }
 
 export class JobQuestion extends LifeTimeQuestion<Job> {
@@ -43,6 +47,10 @@ export class JobQuestion extends LifeTimeQuestion<Job> {
     lifeTimeQuestion._icon = '';
     return lifeTimeQuestion;
   }
+
+  public selectAnswer(answer: JobAnswer): void {
+    super.selectAnswer(answer);
+  }
 }
 
 export class GenderAgeQuestion extends LifeTimeQuestion<GenderAge> {
@@ -52,6 +60,10 @@ export class GenderAgeQuestion extends LifeTimeQuestion<GenderAge> {
     lifeTimeQuestion._icon = '';
     return lifeTimeQuestion;
   }
+
+  public selectAnswer(answer: GenderAgeAnswer): void {
+    super.selectAnswer(answer);
+  }
 }
 
 export class EducationQuestion extends LifeTimeQuestion<Education> {
@@ -60,5 +72,9 @@ export class EducationQuestion extends LifeTimeQuestion<Education> {
     question._answers = EducationAnswer.createEducationAnswers();
     question._icon = '';
     return question;
+  }
+
+  public selectAnswere(answer: EducationAnswer): void {
+    super.selectAnswer(answer);
   }
 }

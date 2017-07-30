@@ -17,6 +17,7 @@ import { StoryBuilderService } from './story-builder/story-builder.service';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { CustomMaterialImportModule } from './custom-material-import/custom-material-import.module';
 import 'hammerjs';
+import { LifeTimeQuestionComponent } from './life-time-question/life-time-question.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import 'hammerjs';
     StoryBoardComponent,
     StoriesComponent,
     PageNotFoundComponent,
-    StoryBuilderComponent
+    StoryBuilderComponent,
+    LifeTimeQuestionComponent
   ],
   imports: [
     BrowserModule,
