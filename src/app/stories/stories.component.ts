@@ -36,20 +36,20 @@ export class StoriesComponent implements OnInit {
         }
     };
 
+    window.scrollTo(0, 0)
+
     const scrollToNext = () => {
-      console.log(`story-${currentStory}`);
-      console.log(document.getElementById(`story-${currentStory}`));
       let pageScrollInstance: PageScrollInstance = PageScrollInstance.newInstance({
         document: this.document,
         scrollTarget: `#story-${currentStory}`,
         pageScrollInterruptible: false,
         pageScrollDuration: 3000,
+        pageScrollOffset: 150,
         pageScrollEasingLogic: easeLogic,
       });
 
       this._pageScrollService.start(pageScrollInstance);
       currentStory ++;
-      console.log("End start scrolling")
 
       setTimeout(scrollToNext, 4000)
     }

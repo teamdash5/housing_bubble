@@ -27,9 +27,20 @@ export class Plot {
         images.gamesFromYouth
       ),
       
-      Story.createStory(`... and listening to ${lifeTime.musicFromTeens}.`),
-      Story.createStory(`${lifeTime.pronounHeShe} had the misfortune to be there for ${lifeTime.annoyingNewsEventFromLife}...`),
-      Story.createStory(`... but ${lifeTime.pronounHeShe} also got to witness ${lifeTime.positiveNewsEventFromLife}.`),
+      Story.createStory(
+        `... and listening to ${lifeTime.musicFromTeens}.`,
+        images.musicFromTeens
+      ),
+
+      Story.createStory(
+        `${lifeTime.pronounHeShe} had the misfortune to be there for ${lifeTime.annoyingNewsEventFromLife}...`,
+        images.annoyingNewsEventFromLife
+      ),
+
+      Story.createStory(
+        `... but ${lifeTime.pronounHeShe} also got to witness ${lifeTime.positiveNewsEventFromLife}.`,
+        images.positiveNewsEventFromLife
+      ),
     ];
 
     plot._lifeTime = lifeTime

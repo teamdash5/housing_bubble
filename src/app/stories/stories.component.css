@@ -36,7 +36,6 @@ This is because we have separators between each story item which we don't want t
 }
 
 .story .icon {
-    border: solid 1px blue;
     height: 200px;
     width: 300px;
 }
@@ -47,8 +46,10 @@ This is because we have separators between each story item which we don't want t
 }
 
 .story .blurb {
+    text-align: center;
     margin: 0 20px;
     font-size: 2em;
+    flex-grow: 2;
 }
 
 .separator {

@@ -5,8 +5,8 @@
     
     <div id="story-{{ i }}" class="story">
 
-      <div class="icon">
-        <img *ngIf="story.imagePath !== null" src="/assets/images/{{ story.imagePath }}" />
+      <div *ngIf="story.imagePath !== null" class="icon">
+        <img src="/assets/images/{{ story.imagePath }}" />
       </div>
       
       <div class="blurb">
