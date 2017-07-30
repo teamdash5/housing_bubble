@@ -9,6 +9,7 @@ import { GenderAgeAnswer, EducationAnswer, PropertyTypeAnswer } from '../story-b
 })
 export class LifeTimeQuestionComponent implements OnInit {
   @Input() question: GenderAgeQuestion | EducationQuestion | PropertyTypeQuestion;
+  // tslint:disable-next-line:max-line-length
   @Output() answerPicked: EventEmitter<GenderAgeAnswer | EducationAnswer | PropertyTypeAnswer> = new EventEmitter<GenderAgeAnswer | EducationAnswer | PropertyTypeAnswer>();
   constructor() { }
 

@@ -21,7 +21,7 @@ export class StoryBuilderComponent implements OnInit {
 
   ngOnInit() {
     this.questions = this._storyBuilderService.questions;
-    
+
     this._storyBuilderService.fetchQuestionToAnswer().subscribe(
       question => this.currentQuestion = question
     );
@@ -31,11 +31,11 @@ export class StoryBuilderComponent implements OnInit {
     );
   }
 
-  triggerBuildStories($event): void {
+  triggerBuildStories(): void {
     if (this.progress !== 3) {
-      return;  
+      return;
     }
-    
+
     const job = 'Builder';
     const gender = this.questions.genderAge.selectedAnswer.label.gender;
     const age = +this.questions.genderAge.selectedAnswer.label.age;
@@ -50,7 +50,12 @@ export class StoryBuilderComponent implements OnInit {
     this._storyBuilderService.selectAnswer($event);
     this._storyBuilderService.fetchQuestionToAnswer().subscribe(question => this.currentQuestion = question);
     this._storyBuilderService.fetchAnsweringProgress.subscribe(
-      progress => this.progress = progress
+      progress => {
+        this.progress = progress;
+        if (progress === 3) {
+          this.triggerBuildStories();
+        }
+      }
     );
   }
 }

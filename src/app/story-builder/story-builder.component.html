@@ -1,5 +1,3 @@
 <div class="outer-wrapper" *ngIf="currentQuestion">
   <app-life-time-question [question]="currentQuestion" (answerPicked)="pickAnswer($event)"></app-life-time-question>
 </div>
-
-<button md-raised-button (click)="triggerBuildStories($event)">Show my stories!</button>
