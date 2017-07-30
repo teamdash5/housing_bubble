@@ -3,7 +3,7 @@ import { LifeTimeQuestion, EducationQuestion, GenderAgeQuestion, PropertyTypeQue
 import { LifeTimeAnswer, EducationAnswer, GenderAgeAnswer, PropertyTypeAnswer } from './shared/life-time-answer';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
-import 'rxjs/RX';
+import 'rxjs/Rx';
 
 export type StoryBuilderQuestions = {
   genderAge: GenderAgeQuestion,
