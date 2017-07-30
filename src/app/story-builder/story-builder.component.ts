@@ -42,7 +42,7 @@ export class StoryBuilderComponent implements OnInit {
     const propertyType = this.questions.propertyTypes.selectedAnswer.label;
     //const education: Education = this.questions.education.selectedAnswer.label;
     const education: Education = 'University';
-    const lifeTime = LifeTime.CreateLifeTime(job, gender, propertyType, age, education);
+    const lifeTime = LifeTime.CreateLifeTime(job, gender, propertyType, yearOfBirth, education);
     this._storiesService.buildStories(lifeTime);
     this._router.navigate(['/stories']);
   }
