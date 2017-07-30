@@ -22,7 +22,7 @@ export class Plot {
       Story.createStory(`... ${lifeTime.pronounHeShe} grew up playing ${lifeTime.gamesFromYouth}... `),
       Story.createStory(`... and listening to ${lifeTime.musicFromTeens}.`),
       Story.createStory(`${lifeTime.pronounHeShe} had the misfortune to be there for ${lifeTime.annoyingNewsEventFromLife}...`),
-      Story.createStory(`... but ${lifeTime.pronounHeShe} also got witness ${lifeTime.positiveNewsEventFromLife}.`),
+      Story.createStory(`... but ${lifeTime.pronounHeShe} also got to witness ${lifeTime.positiveNewsEventFromLife}.`),
     ];
 
     plot._lifeTime = lifeTime

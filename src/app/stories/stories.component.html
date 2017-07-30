@@ -1,9 +1,9 @@
 <h1>{{ plot.lifeTime.name }}'s story...</h1>
 <div class="plot">
 
-  <div class="story-wrapper" *ngFor="let story of plot.stories">
+  <div class="story-wrapper" *ngFor="let story of plot.stories; let i = index">
     
-    <div class="story">
+    <div id="story-{{ i }}" class="story">
 
       <div class="icon"></div>
       
@@ -17,4 +17,5 @@
 
   </div>
 
+  <div id="bottom">Bottom</div>
 </div>
