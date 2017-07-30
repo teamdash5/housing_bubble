@@ -69,7 +69,7 @@ export class Plot {
 
       Story.createStory(
         `Thanks to an interest rate of ${lifeTime.interestRate}...`,
-      
+        images.interestRate
       ),
       
       Story.createStory(
@@ -97,6 +97,7 @@ type StoryImages = {
   positiveNewsEventFromLife: string,
   moneySpent: string,
   house: string,
+  interestRate: string,
 }
 
 const babyBoomerImages:StoryImages = {
@@ -106,6 +107,7 @@ const babyBoomerImages:StoryImages = {
   positiveNewsEventFromLife: 'Berlin Wall.jpg',
   moneySpent: 'big money pile.jpg',
   house: '80s house.jpg',
+  interestRate: '1988 interest chart.png',
 }
 
 const genXimages:StoryImages = {
@@ -115,6 +117,7 @@ const genXimages:StoryImages = {
   positiveNewsEventFromLife: 'Sorry_Day_poster.jpg',
   moneySpent: 'small money pile.jpeg',
   house: 'modern house.jpg',
+  interestRate: '2017 interest chart.png',
 }
 
 const futureImages:StoryImages = {
@@ -124,4 +127,5 @@ const futureImages:StoryImages = {
   positiveNewsEventFromLife: 'trump.png',
   moneySpent: 'trump.png',
   house: 'future house.jpg',
+  interestRate: '2017 interest chart.png',
 }

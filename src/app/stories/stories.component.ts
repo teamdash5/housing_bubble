@@ -61,6 +61,6 @@ export class StoriesComponent implements OnInit {
       setTimeout(scrollToNext, 4000)
     }
 
-     // scrollToNext()
+     scrollToNext()
   }
 }
