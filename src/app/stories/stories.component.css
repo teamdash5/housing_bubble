@@ -38,7 +38,12 @@ This is because we have separators between each story item which we don't want t
 .story .icon {
     border: solid 1px blue;
     height: 200px;
-    width: 200px;
+    width: 300px;
+}
+
+.story .icon img {
+    width: 100%;
+    height: auto;
 }
 
 .story .blurb {

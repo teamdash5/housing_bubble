@@ -16,10 +16,17 @@ export class Plot {
 
   public static createPlot(lifeTime: LifeTime): Plot {
     const plot = new Plot();
-    // TODO: do something smart about plotting your lifetime.
+
+    const images:StoryImages = lifeTime.yearOfBirth < 1990 ? earlyImages : lateImages
+
     plot._stories = [
       Story.createStory(`Born in ${lifeTime.yearOfBirth}...`),
-      Story.createStory(`... ${lifeTime.pronounHeShe} grew up playing ${lifeTime.gamesFromYouth}... `),
+      
+      Story.createStory(
+        `... ${lifeTime.pronounHeShe} grew up playing ${lifeTime.gamesFromYouth}... `,
+        images.gamesFromYouth
+      ),
+      
       Story.createStory(`... and listening to ${lifeTime.musicFromTeens}.`),
       Story.createStory(`${lifeTime.pronounHeShe} had the misfortune to be there for ${lifeTime.annoyingNewsEventFromLife}...`),
       Story.createStory(`... but ${lifeTime.pronounHeShe} also got to witness ${lifeTime.positiveNewsEventFromLife}.`),
@@ -29,4 +36,25 @@ export class Plot {
 
     return plot;
   }
+}
+
+type StoryImages = {
+  gamesFromYouth: string,
+  musicFromTeens: string,
+  annoyingNewsEventFromLife: string,
+  positiveNewsEventFromLife: string,
+}
+
+const earlyImages:StoryImages = {
+  gamesFromYouth: 'Etch-a-sketch.jpg',
+  musicFromTeens: 'Elvis.jpg',
+  annoyingNewsEventFromLife: 'Rick Astley.jpg',
+  positiveNewsEventFromLife: 'Berlin Wall.jpg',
+}
+
+const lateImages:StoryImages = {
+  gamesFromYouth: 'Etch-a-sketch.jpg',
+  musicFromTeens: 'Elvis.jpg',
+  annoyingNewsEventFromLife: 'Rick Astley.jpg',
+  positiveNewsEventFromLife: 'Berlin Wall.jpg',
 }
