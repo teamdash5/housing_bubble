@@ -12,6 +12,7 @@ import { StoriesComponent } from './stories/stories.component';
 import { StoriesService } from './stories/stories.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { StoryBuilderComponent } from './story-builder/story-builder.component';
+import { StoryBuilderService } from './story-builder/story-builder.service';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { CustomMaterialImportModule } from './custom-material-import/custom-material-import.module';
@@ -34,7 +35,7 @@ import 'hammerjs';
     CustomMaterialImportModule,
     Ng2PageScrollModule.forRoot(),
   ],
-  providers: [StoriesService],
+  providers: [StoriesService, StoryBuilderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

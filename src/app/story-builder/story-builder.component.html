@@ -1,8 +1,8 @@
-<div class="outer-wrapper">
+<div class="outer-wrapper" *ngIf="currentQuestion">
   <div class="wrapper">
     <div class="cell" *ngFor="let answer of currentQuestion.answers">
       <img src="{{ answer.icon }}" />
-      {{ answer.label }}
+      {{ answer.description }}
     </div>
   </div>
   <div class="centre">{{currentQuestion.icon}}</div>
