@@ -7,7 +7,7 @@ import 'rxjs/Rx';
 
 export type StoryBuilderQuestions = {
   genderAge: GenderAgeQuestion,
-  education: EducationQuestion,
+  //education: EducationQuestion,
   propertyTypes: PropertyTypeQuestion
 };
 
@@ -25,7 +25,7 @@ export class StoryBuilderService {
   public init(withFuture: boolean = true): void {
     this._questions = {
       genderAge: withFuture ? GenderAgeQuestion.createFutureGenderAgeQuestions() : GenderAgeQuestion.createGenderAgeQuestions(),
-      education: EducationQuestion.createEducationQuestion(),
+      //education: EducationQuestion.createEducationQuestion(),
       propertyTypes: PropertyTypeQuestion.createPropertyTypeQuestion()
     };
     this._answeringProgress = Observable.of(0 as AnsweringProgress);
@@ -41,9 +41,9 @@ export class StoryBuilderService {
         case 0:
           return this.questions.genderAge;
         case 1:
-          return this.questions.education;
-        case 2:
-          return this.questions.propertyTypes
+          return this.questions.propertyTypes;
+        // case 2:
+        //   return this.questions.propertyTypes
         default:
           return null;
       }
@@ -56,9 +56,9 @@ export class StoryBuilderService {
       progress++;
     }
 
-    if (this.questions.education.selectedAnswer) {
-      progress++;
-    }
+    // if (this.questions.education.selectedAnswer) {
+    //   progress++;
+    // }
 
     if (this.questions.propertyTypes.selectedAnswer) {
       progress++;
@@ -76,9 +76,9 @@ export class StoryBuilderService {
       this.questions.genderAge.selectAnswer($event);
     }
 
-    if ($event instanceof EducationAnswer) {
-      this.questions.education.selectAnswer($event);
-    }
+    // if ($event instanceof EducationAnswer) {
+    //   this.questions.education.selectAnswer($event);
+    // }
 
     if ($event instanceof PropertyTypeAnswer) {
       this.questions.propertyTypes.selectAnswer($event);

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { StoriesService } from '../stories/stories.service';
-import { LifeTime, Job } from '../shared/life-time';
+import { LifeTime, Job, Education } from '../shared/life-time';
 import { StoryBuilderQuestions, AnsweringProgress, StoryBuilderService } from './story-builder.service';
 import { LifeTimeQuestion, EducationQuestion, GenderAgeQuestion, PropertyTypeQuestion, JobQuestion } from './shared/life-time-question';
 import { GenderAge, GenderAgeAnswer, EducationAnswer, PropertyTypeAnswer } from './shared/life-time-answer';
@@ -32,16 +32,17 @@ export class StoryBuilderComponent implements OnInit {
   }
 
   triggerBuildStories(): void {
-    if (this.progress !== 3) {
+    if (this.progress !== 2) {
       return;
     }
-    
-    const job:Job = 'Builder';
+
+    const job: Job = 'Builder';
     const gender = this.questions.genderAge.selectedAnswer.label.gender;
     const yearOfBirth = this.questions.genderAge.selectedAnswer.label.yearOfPurchase - 30;
     const propertyType = this.questions.propertyTypes.selectedAnswer.label;
-    const education = this.questions.education.selectedAnswer.label;
-    const lifeTime = LifeTime.CreateLifeTime(job, gender, propertyType, yearOfBirth, education);
+    //const education: Education = this.questions.education.selectedAnswer.label;
+    const education: Education = 'University';
+    const lifeTime = LifeTime.CreateLifeTime(job, gender, propertyType, age, education);
     this._storiesService.buildStories(lifeTime);
     this._router.navigate(['/stories']);
   }
@@ -52,7 +53,7 @@ export class StoryBuilderComponent implements OnInit {
     this._storyBuilderService.fetchAnsweringProgress.subscribe(
       progress => {
         this.progress = progress;
-        if (progress === 3) {
+        if (progress === 2) {
           this.triggerBuildStories();
         }
       }
