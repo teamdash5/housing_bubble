@@ -27,31 +27,34 @@
     width: 49%;
     height: 42vh;
     text-align: center;
+    cursor: pointer;
 }
 
-.wrapper .cell a {
-    font-size: 2em;
-    color: purple;
+.wrapper .cell:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.wrapper .cell {
     text-decoration: none;
-    padding-top: 2em;
 }
 
 .wrapper .cell.Female-1988 {
     background: url('/assets/images/1988-Female.jpg') no-repeat center center;
-    background-size: contain;
+    background-size: auto 60%;
 }
 
 .wrapper .cell.Female-2017 {
     background: url('/assets/images/2017-Female.jpg') no-repeat center center;
-    background-size: contain;
+    background-size: auto 60%;
 }
 
 .wrapper .cell.Male-1988 {
     background: url('/assets/images/1988-Male.jpg') no-repeat center center;
-    background-size: contain;
+    background-size: auto 60%;
 }
 
 .wrapper .cell.Male-2017 {
     background: url('/assets/images/2017-Male.jpg') no-repeat center center;
-    background-size: contain;
+    background-size: auto 60%;
 }
