@@ -19,8 +19,12 @@ export class StoryBuilderService {
   private _answeringProgress: Observable<AnsweringProgress>;
 
   constructor() {
+    this.init();
+  }
+
+  private init(withFuture: boolean = true): void {
     this._questions = {
-      genderAge: GenderAgeQuestion.createGenderAgeQuestions(),
+      genderAge: withFuture ? GenderAgeQuestion.createFutureGenderAgeQuestions() : GenderAgeQuestion.createGenderAgeQuestions(),
       education: EducationQuestion.createEducationQuestion(),
       propertyTypes: PropertyTypeQuestion.createPropertyTypeQuestion()
     };

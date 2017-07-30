@@ -31,8 +31,8 @@ export class JobAnswer extends LifeTimeAnswer<Job> {
 }
 
 export type YearOfPurchase = 1988 | 2017 | 2050;
-export const YEAR_OF_PURCHASES:YearOfPurchase[] = [1988, 2017];
-export const FUTURE_YEAR_OF_PURCHAES:YearOfPurchase = 2050;
+export const YEAR_OF_PURCHASES: YearOfPurchase[] = [1988, 2017];
+export const FUTURE_YEAR_OF_PURCHAES: YearOfPurchase = 2050;
 export type GenderAge = {
   gender: Gender,
   age: YearOfPurchase

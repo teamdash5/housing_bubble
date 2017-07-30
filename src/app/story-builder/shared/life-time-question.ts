@@ -61,6 +61,13 @@ export class GenderAgeQuestion extends LifeTimeQuestion<GenderAge> {
     return lifeTimeQuestion;
   }
 
+  public static createFutureGenderAgeQuestions(): GenderAgeQuestion {
+    const lifeTimeQuestion = new GenderAgeQuestion();
+    lifeTimeQuestion._answers = GenderAgeAnswer.createGenderAgeAnswers().concat(GenderAgeAnswer.createFutureGenderAgeAnswers());
+    lifeTimeQuestion._icon = 'gender-question';
+    return lifeTimeQuestion;
+  }
+
   public selectAnswer(answer: GenderAgeAnswer): void {
     super.selectAnswer(answer);
   }
