@@ -21,8 +21,13 @@
     width: 49%;
     height: 42vh;
     text-align: center;
-    font-size: 3em;
-    color: white;
+}
+
+.wrapper .cell a {
+    font-size: 2em;
+    color: purple;
+    text-decoration: none;
+    padding-top: 2em;
 }
 
 .wrapper .cell.Female-1988 {

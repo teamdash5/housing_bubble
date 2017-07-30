@@ -1,9 +1,8 @@
 <div class="wrapper">
-  <div class="cell {{ answer.icon }}" *ngFor="let answer of question.answers">
-    <a
-      href="#"
-      md-button [disableRipple]="true"
+  <div class="cell {{ answer.icon }}" *ngFor="let answer of question.answers"
       (click)="onAnswerClicked($event, answer)">
+    <a
+      href="#">
       {{ answer.description }}
     </a>
   </div>
