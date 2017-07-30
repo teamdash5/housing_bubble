@@ -51,6 +51,10 @@ export class LifeTime {
     return this.gender === "Male" ? "he" : "she"
   }
 
+  public get pronounHisHer(): string {
+    return this.gender === "Male" ? "his" : "her"
+  }
+
   public get musicFromTeens(): string {
     return this.infoAboutLife.musicFromTeens
   }
@@ -61,6 +65,14 @@ export class LifeTime {
 
   public get positiveNewsEventFromLife(): string {
     return this.infoAboutLife.positiveNewsEventFromLife
+  }
+
+  public get salary(): string {
+    return this.infoAboutLife.salary(this.gender)
+  }
+
+  public get percentageOfIncomeOnMortgage(): string {
+    return this.infoAboutLife.percentageOfIncomeOnMortgage(this.gender)
   }
 
   public static CreateLifeTime(job: Job, gender: Gender, propertyType: PropertyType, yob: number, education: Education): LifeTime {
@@ -80,6 +92,8 @@ type InfoAboutLife = {
   annoyingNewsEventFromLife: string, // "They had the misfortune to be there for {{ annoyingNewsEventFromLife }}..."
   positiveNewsEventFromLife: string, // "... but they also witnessed {{ positiveNewsEventFromLife }}."
   name: (gender:Gender) => string, // Returns a common name for this generation.
+  salary: (gender:Gender) => string, // Include '$' at start, and commas between thousands.
+  percentageOfIncomeOnMortgage: (gender:Gender) => string, // Include '%' at the end
 }
 
 const babyBoomerInfo:InfoAboutLife = {
@@ -87,7 +101,9 @@ const babyBoomerInfo:InfoAboutLife = {
   musicFromTeens: "The Beatles and Elvis",
   annoyingNewsEventFromLife: "the debut of Rick Astley's \"Never Gonna Give you up\"",
   positiveNewsEventFromLife: "the collapse of the Berlin Wall",
-  name: (gender:Gender) => gender === "Male" ? "Daniel" : "Dora",
+  name: (gender) => gender === "Male" ? "Daniel" : "Dora",
+  salary: (gender) => gender === 'Male' ? '$27,164' : '$21,434',
+  percentageOfIncomeOnMortgage: (gender) => gender === 'Male' ? '40%' : '',
 }
 
 const genXInfo:InfoAboutLife = {
@@ -96,4 +112,6 @@ const genXInfo:InfoAboutLife = {
   annoyingNewsEventFromLife: "Meat Loaf singing in the AFL grand final",
   positiveNewsEventFromLife: "the national apology to the stolen generation",
   name: (gender:Gender) => gender === "Female" ? "Laura" : "Pete",
+  salary: (gender) => gender === 'Male' ? '$83,902' : '$70,392',
+  percentageOfIncomeOnMortgage: (gender) => gender == 'Male' ? '34%' : '',
 }

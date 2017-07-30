@@ -41,6 +41,18 @@ export class Plot {
         `... but ${lifeTime.pronounHeShe} also got to witness ${lifeTime.positiveNewsEventFromLife}.`,
         images.positiveNewsEventFromLife
       ),
+
+      Story.createStory(`After school, ${lifeTime.pronounHeShe} went on an overseas trip to London...`),
+
+      Story.createStory(`... costing ${'blah'}% of ${lifeTime.pronounHisHer} house deposit!`),
+
+      Story.createStory(`Upon returning, ${lifeTime.pronounHeShe} started saving for ${lifeTime.pronounHisHer} first house with a salary of ${lifeTime.salary}...`),
+
+      Story.createStory(`...it took ${'blah'} weeks (without spending money on rent, clothing, or even food!) to save a 20% deposit.`),
+
+      Story.createStory(`Once purchased, ${lifeTime.pronounHeShe} spent ${lifeTime.percentageOfIncomeOnMortgage} of ${lifeTime.pronounHisHer} pre-tax income on portgage repayments.`),
+
+      Story.createStory(`For ${lifeTime.pronounHisHer} troubles, they gave the bank ... blah blah interest vs principle.`),
     ];
 
     plot._lifeTime = lifeTime
@@ -57,15 +69,15 @@ type StoryImages = {
 }
 
 const earlyImages:StoryImages = {
-  gamesFromYouth: 'Etch-a-sketch.jpg',
-  musicFromTeens: 'Elvis.jpg',
-  annoyingNewsEventFromLife: 'Rick Astley.jpg',
-  positiveNewsEventFromLife: 'Berlin Wall.jpg',
+  gamesFromYouth: Math.random() > 0.5 ? 'PS1.jpg' : 'SNES.jpg',
+  musicFromTeens: Math.random() > 0.5 ? 'Nirvana.jpg' : 'Spice Girls 2.jpg',
+  annoyingNewsEventFromLife: 'Meatloaf.png',
+  positiveNewsEventFromLife: 'Sorry_Day_poster.jpg',
 }
 
 const lateImages:StoryImages = {
   gamesFromYouth: 'Etch-a-sketch.jpg',
-  musicFromTeens: 'Elvis.jpg',
+  musicFromTeens: Math.random() > 0.5 ? 'Elvis.jpg' : 'The Beatles.jpg',
   annoyingNewsEventFromLife: 'Rick Astley.jpg',
   positiveNewsEventFromLife: 'Berlin Wall.jpg',
 }
