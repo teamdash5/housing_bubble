@@ -1,6 +1,6 @@
 import { JOBS, Job, GENDER, Gender,
          Education, EDUCATIONS, PropertyType,
-         PROPERTY_TYPES } from '../../shared/life-time';
+         PROPERTY_TYPES, getName } from '../../shared/life-time';
 
 export class LifeTimeAnswer<T> {
   protected _icon: string;
@@ -30,9 +30,9 @@ export class JobAnswer extends LifeTimeAnswer<Job> {
   }
 }
 
-export type YearOfPurchase = '1988' | '2017' | 'Future';
-export const YEAR_OF_PURCHASES:YearOfPurchase[] = ['1988', '2017'];
-export const FUTURE_YEAR_OF_PURCHAES:YearOfPurchase = 'Future';
+export type YearOfPurchase = 1988 | 2017 | 2050;
+export const YEAR_OF_PURCHASES:YearOfPurchase[] = [1988, 2017];
+export const FUTURE_YEAR_OF_PURCHAES:YearOfPurchase = 2050;
 export type GenderAge = {
   gender: Gender,
   age: YearOfPurchase
@@ -54,13 +54,13 @@ export class GenderAgeAnswer extends LifeTimeAnswer<GenderAge> {
     return GENDER.map(g => {
         const answer = new GenderAgeAnswer();
         answer._label = { gender: g as Gender, age: yearOfPurchase } as GenderAge;
-        answer._icon = '';
+        answer._icon = `${g}-${yearOfPurchase}`;
         return answer;
       });
   }
 
   public get description(): string {
-    return this._label.gender + ' ' + this._label.age;
+    return getName(this._label.gender, this._label.age - 30) + ", buying a house in " + this._label.age;
   }
 
   constructor() {

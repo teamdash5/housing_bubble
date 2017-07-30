@@ -8,6 +8,33 @@ export const GENDER = ['Male', 'Female'];
 export const PROPERTY_TYPES = ['House', 'Unit'];
 export const EDUCATIONS = ['TAFE', 'High School', 'Primary School', 'University'];
 
+export const getName = (gender: Gender, yob: number) => {
+
+  if (gender === "Male") {
+
+    if (yob < 1980) {
+      return "Daniel";
+    } else if (yob < 2020) {
+      return "Pete"
+    } else {
+      return "Jax"
+    }
+
+  } else {
+
+    if (yob < 1980) {
+      return "Dora";
+    } else if (yob < 2020) {
+      return "Laura"
+    } else {
+      return "Lyla"
+    }
+
+  }
+
+}
+
+
 export class LifeTime {
   private _job: Job;
   private _gender: Gender;
@@ -40,7 +67,7 @@ export class LifeTime {
   }
 
   public get name(): string {
-    return this.infoAboutLife.name(this.gender)
+    return getName(this.gender, this._yob)
   }
 
   public get gamesFromYouth(): string {
@@ -107,7 +134,6 @@ type InfoAboutLife = {
   musicFromTeens: string, // "... and listening to {{ musicFromTeens }}."
   annoyingNewsEventFromLife: string, // "They had the misfortune to be there for {{ annoyingNewsEventFromLife }}..."
   positiveNewsEventFromLife: string, // "... but they also witnessed {{ positiveNewsEventFromLife }}."
-  name: (gender:Gender) => string, // Returns a common name for this generation.
   salary: (gender:Gender) => string, // Include '$' at start, and commas between thousands.
   percentageOfIncomeOnMortgage: (gender:Gender) => string, // Include '%' at the end
   weeksToSaveDeposit: (gender:Gender) => number,
@@ -121,7 +147,6 @@ const babyBoomerInfo:InfoAboutLife = {
   musicFromTeens: "The Beatles and Elvis",
   annoyingNewsEventFromLife: "the debut of Rick Astley's \"Never Gonna Give you up\"",
   positiveNewsEventFromLife: "the collapse of the Berlin Wall",
-  name: (gender) => gender === "Male" ? "Daniel" : "Dora",
   salary: (gender) => gender === 'Male' ? '$27,164' : '$21,434',
   percentageOfIncomeOnMortgage: (gender) => gender === 'Male' ? '40%' : '',
   weeksToSaveDeposit: (gender) => gender === 'Male' ? 36.37 : 46.09,
@@ -135,7 +160,6 @@ const genXInfo:InfoAboutLife = {
   musicFromTeens: "Spice Girls and Nirvana",
   annoyingNewsEventFromLife: "Meat Loaf singing in the AFL grand final",
   positiveNewsEventFromLife: "the national apology to the stolen generation",
-  name: (gender:Gender) => gender === "Female" ? "Laura" : "Pete",
   salary: (gender) => gender === 'Male' ? '$83,902' : '$70,392',
   percentageOfIncomeOnMortgage: (gender) => gender == 'Male' ? '34%' : '',
   weeksToSaveDeposit: (gender) => gender === 'Male' ? 68.17 : 81.26,

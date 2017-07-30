@@ -4,24 +4,43 @@
     top: 50%;
     width: 100px;
     height: 100px;
-    border: solid 1px blue;
     margin-left: -50px;
     margin-top: -50px;
     text-align: center;
-    background: yellow;
+    background: white;
     border-radius: 50px;
 }
 
 .wrapper {
     display: flex;
-    border: solid 1px green;
     flex-wrap: wrap;
 }
 
 .wrapper .cell {
-    border: solid 1px red;
     flex: 1 1 auto;
     width: 49%;
     height: 42vh;
     text-align: center;
+    font-size: 3em;
+    color: white;
+}
+
+.wrapper .cell.Female-1988 {
+    background: url('/assets/images/1988-Female.jpg') no-repeat center center;
+    background-size: contain;
+}
+
+.wrapper .cell.Female-2017 {
+    background: url('/assets/images/2017-Female.jpg') no-repeat center center;
+    background-size: contain;
+}
+
+.wrapper .cell.Male-1988 {
+    background: url('/assets/images/1988-Male.jpg') no-repeat center center;
+    background-size: contain;
+}
+
+.wrapper .cell.Male-2017 {
+    background: url('/assets/images/2017-Male.jpg') no-repeat center center;
+    background-size: contain;
 }
